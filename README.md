@@ -28,12 +28,12 @@ Because of the way the task is structured, I took on an assumption, that the hou
 
 ### 2. App logic
 1) Get latest parsed block from The Block `latestBlock`
-2) For each market defined in `config.ts`
-2.1. Fetch `Mint` and `Redeem` events from TheGraph for the last 24h
-2.2. Calculate hourly supply change and record it in DDB 
-2.3. Fetch the events from infura from `latestBlock + 1` 
-2.4. Start listening on events
-2.5. Update the DB with events from 2.3
+2) For each market defined in `config.ts`\
+2.1. Fetch `Mint` and `Redeem` events from TheGraph for the last 24h\
+2.2. Calculate hourly supply change and record it in DDB \
+2.3. Fetch the events from infura from `latestBlock + 1` \
+2.4. Start listening on events\
+2.5. Update the DB with events from 2.3\
 3) When listeners are triggered, update the DB with captured event
 4) Expose endpoint `/supply/:address`on `localhost:3000` to fetch the supply for last 24h.
 
